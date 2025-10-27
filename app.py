@@ -63,7 +63,7 @@ def generate_pdf():
     temp_pdf = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf")
     pdf_file = temp_pdf.name
 
-    pdfmetrics.registerFont(TTFont("Arabic", "arial.ttf"))
+    pdfmetrics.registerFont(TTFont("Arabic", "fonts/NotoNaskhArabic-Regular.ttf"))
     styles = getSampleStyleSheet()
     doc = SimpleDocTemplate(pdf_file, pagesize=A4, rightMargin=20, leftMargin=20, topMargin=20, bottomMargin=20)
 
