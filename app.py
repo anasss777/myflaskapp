@@ -53,7 +53,7 @@ def generate_pdf():
         customers.priority,
         customers.address,
         customers.nat
-    ORDER BY rents DESC, insta_followers DESC, priority;
+    ORDER BY rents DESC, insta_followers DESC, priority limit 10;
     """)
     rows = cursor.fetchall()
     columns = [desc[0] for desc in cursor.description]
